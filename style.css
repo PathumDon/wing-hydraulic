@@ -171,6 +171,42 @@ h3 {
     margin: 10px auto 0;
 }
 
+.divider.ml-0 {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* About Section */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.about-image img {
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+@media(min-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 /* Top Bar */
 .top-bar {
     background-color: var(--dark);
