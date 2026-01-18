@@ -498,20 +498,35 @@ h3 {
 .industry-item {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 30px;
+    padding: 20px;
+    /* Reduced padding */
     border-radius: 8px;
     text-align: center;
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .industry-item:hover {
     background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent);
+    transform: translateY(-5px);
 }
 
 .industry-item span {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    /* Increased size */
     display: block;
     margin-bottom: 15px;
+}
+
+.industry-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    word-wrap: break-word;
+    /* Prevent overflow */
 }
 
 @media(min-width: 768px) {
