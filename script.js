@@ -62,4 +62,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // WhatsApp Form Submission
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name = this.querySelector('input[placeholder="Your Name"]').value;
+            const company = this.querySelector('input[placeholder="Company Name"]').value;
+            const phone = this.querySelector('input[placeholder="Phone Number"]').value;
+            const requirements = this.querySelector('textarea').value;
+
+            const message = `*New Request from Website*%0A
+*Name:* ${name}%0A
+*Company:* ${company}%0A
+*Phone:* ${phone}%0A
+*Requirements:* ${requirements}`;
+
+            const whatsappUrl = `https://wa.me/971503192055?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+        });
+    }
 });

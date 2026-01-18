@@ -67,6 +67,12 @@ img {
     color: var(--white);
 }
 
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3 {
+    color: var(--white);
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
